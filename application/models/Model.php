@@ -26,7 +26,6 @@ class Model extends CI_Model {
 
 	}
 
-
 	public function join(string $table1,string $table2,string $con)
 	{
 		
@@ -37,7 +36,6 @@ class Model extends CI_Model {
 		return $r->result();	
 
 	}
-
 
 	public function join_three(string $table1,string $table2,string $table3,string $con1,string $con2)
 	{
@@ -50,7 +48,6 @@ class Model extends CI_Model {
 		return $r->result();	
 
 	}
-
 
 	public function select_where(string $table,array $where)
 	{
@@ -74,8 +71,4 @@ class Model extends CI_Model {
 		return $this->db->update($table,$data,$where);
 	}
 
-
-
-	
-	
 }
