@@ -75,6 +75,8 @@
 
 <script src="https://use.fontawesome.com/c560c025cf.js"></script>
 <div class="container">
+    <div class="row"> 
+    <div class="col-md-7"> 
    <div class="card shopping-cart">
             <div class="card-header bg-dark text-light">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -151,3 +153,51 @@
             </div>
         </div>
 </div>
+
+
+ 
+
+ <div class="col-md-5">
+
+
+<?php    if(empty($this->session->userdata('fname')))
+{
+
+echo "please login first";
+
+
+}
+else 
+{ ?>
+
+<form method="POST"  action = "<?php echo base_url() ?>User/save_order"> 
+
+    <label> name </label>
+    <input type="text" name="name" value="<?php echo $this->session->userdata('fname'); ?>" >  <br>
+<label> Mobile </label>
+    <input type="number" name="mobile" value="<?php echo $this->session->userdata('fname'); ?>" >  <br>
+
+
+  <!--   <label> payment </label>
+    <input type="text" name="name" value="" > <br> -->
+
+    <label> Address </label>
+     <textarea name="address">  </textarea> <br>
+    <input type="submit" name="submit" value="checkout">
+    </form> 
+
+ <?php 
+}
+
+   ?>
+
+
+
+
+ </div>
+
+ </div>
+
+
+ </div>
+
